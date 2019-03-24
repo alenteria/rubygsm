@@ -459,7 +459,6 @@ class Modem
 			if m = buf.match(/^\+(CM[ES]) ERROR: (\d+)$/)
 				log_then_decr "!! Raising Gsm::Error #{$1} #{$2}"
 				raise Error.new(*m.captures)
-				return
 			end
 		
 			# some errors are not so useful :|
